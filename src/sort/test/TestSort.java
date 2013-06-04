@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import sort.BinaryInsertionSort;
 import sort.BubbleSort;
+import sort.QuickSort;
 import sort.ShellSort;
 import sort.Sort;
 import sort.StraightInsertionSort;
@@ -16,11 +17,12 @@ public class TestSort {
 	}
 	
 	public static void main(String[] args){
-		Sort[] sorters = new Sort[4];
+		Sort[] sorters = new Sort[5];
 		sorters[0] = new BinaryInsertionSort();
 		sorters[1] = new BubbleSort();
 		sorters[2] = new StraightInsertionSort();
 		sorters[3] = new ShellSort();
+		sorters[4] = new QuickSort();
 		
 		int[] array = RandomArrayGenerator.generateIntArray(100);
 		System.out.println(Arrays.toString(array));
