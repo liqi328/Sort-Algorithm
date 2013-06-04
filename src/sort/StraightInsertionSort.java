@@ -2,8 +2,8 @@ package sort;
 
 import java.util.Arrays;
 
-public class InsertionSort {
-	public static void sort(int[] array){
+public class StraightInsertionSort implements Sort {
+	public void sort(int[] array){
 		int tmp, j;
 		for(int i = 1; i < array.length; ++i){
 			j = i;
@@ -20,7 +20,7 @@ public class InsertionSort {
 	public static void main(String[] args){
 		int[] array = {49, 38, 65, 97, 76, 13, 27, 49};
 		System.out.println(Arrays.toString(array));
-		sort(array);
+		new StraightInsertionSort().sort(array);
 		System.out.println(Arrays.toString(array));
 	}
 }

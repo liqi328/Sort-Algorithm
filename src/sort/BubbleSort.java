@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class BubbleSort implements Sort {
 	
 	private static void swap(int a, int b){
 		a = a + b;
@@ -25,7 +25,7 @@ public class BubbleSort {
 	 * 
 	 * @param array
 	 */
-	public static void sort(int[] array){
+	public void sort(int[] array){
 		int swapCount = 0;
 		for(int i = 0; i < array.length; ++i){
 			for(int j = 1; j < array.length - i; ++j){
@@ -111,7 +111,7 @@ public class BubbleSort {
 		System.out.println(Arrays.toString(array));
 		
 		int [] tmp = Arrays.copyOf(array, array.length);
-		sort(tmp);
+		new BubbleSort().sort(tmp);
 		System.out.println(Arrays.toString(tmp));
 		
 		tmp = Arrays.copyOf(array, array.length);
