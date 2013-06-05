@@ -5,6 +5,7 @@ import java.util.Arrays;
 import sort.BinaryInsertionSort;
 import sort.BubbleSort;
 import sort.HeapSort;
+import sort.MergeSort;
 import sort.QuickSort;
 import sort.ShellSort;
 import sort.Sort;
@@ -18,19 +19,19 @@ public class TestSort {
 	}
 	
 	public static void main(String[] args){
-		Sort[] sorters = new Sort[6];
+		Sort[] sorters = new Sort[7];
 		sorters[0] = new BinaryInsertionSort();
 		sorters[1] = new BubbleSort();
 		sorters[2] = new StraightInsertionSort();
 		sorters[3] = new ShellSort();
 		sorters[4] = new QuickSort();
 		sorters[5] = new HeapSort();
+		sorters[6] = new MergeSort();
 		
-		int[] array = RandomArrayGenerator.generateIntArray(100);
+		int[] array = RandomArrayGenerator.generateIntArray(100, 1, 1000);
 		System.out.println(Arrays.toString(array));
 		for(Sort sorter: sorters){
 			testSort(sorter, array);
 		}
-				
 	}
 }
