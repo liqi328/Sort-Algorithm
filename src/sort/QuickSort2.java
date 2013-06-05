@@ -21,12 +21,13 @@ public class QuickSort2 extends AbstractQuickSort {
 			}
 		}
 		swap(array, i + 1, high);
-		System.out.println(Arrays.toString(array));
+		//System.out.println(Arrays.toString(array));
 		return i + 1;
 	}
 	
 	public static void main(String[] args){
-		int[] array = {49, 38, 65, 97, 76, 13, 27, 49};
+		//int[] array = {49, 38, 65, 97, 76, 13, 27, 49};
+		int[] array = { 1000, 0, 6, 5, 4, 3, 2, 1, 7, 156, 44, 23, 123, 11, 5 };
 		System.out.println(Arrays.toString(array));
 		new QuickSort2().sort(array);
 		System.out.println(Arrays.toString(array));
