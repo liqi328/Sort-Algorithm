@@ -19,6 +19,21 @@ public class MergeSort implements Sort {
 		}
 	}
 	
+	private void merge(int[] array, int s, int m, int t){
+		int i = s;
+		int j = m + 1;
+		int tmp;
+		for(; i <= m && j <= t;){
+			if(array[i] <= array[j]){
+				++i;
+			}else{
+				tmp = array[i];
+				array[i] = array[j];
+				array[j] = tmp;
+			}
+		}
+	}
+	
 	private void merge(int[] array, int s, int m, int t, int[] temp){
 		int i = s;
 		int j = m + 1;

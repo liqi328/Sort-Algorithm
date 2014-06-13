@@ -18,7 +18,7 @@ public class BinarySortTreeTest {
 			System.out.println("Not founded.");
 		}
 		
-		bst.deleteBST(12);
+		bst.deleteBST(23);
 		bst.inOrderTraverse();
 		
 		bst.deleteBST(45);

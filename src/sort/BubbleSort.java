@@ -27,8 +27,8 @@ public class BubbleSort implements Sort {
 	 */
 	public void sort(int[] array){
 		int swapCount = 0;
-		for(int i = 0; i < array.length; ++i){
-			for(int j = 1; j < array.length - i; ++j){
+		for(int i = 1; i < array.length; ++i){
+			for(int j = 1; j < array.length - i + 1; ++j){
 				if(array[j - 1] > array[j]){
 					/* 交换两个变量  method 1*/
 //					array[j] = array[j] + array[j - 1];
@@ -107,7 +107,7 @@ public class BubbleSort implements Sort {
 	}
 	
 	public static void main(String[] args){
-		int[] array = {49, 38, 65, 97, 76, 13, 27, 49, 78, 89, 100, 120, 134};
+		int[] array = {49, 38, 65, 97, 76, 13, 27, 49, 78, 89, 100, 120, 14};
 		System.out.println(Arrays.toString(array));
 		
 		int [] tmp = Arrays.copyOf(array, array.length);
